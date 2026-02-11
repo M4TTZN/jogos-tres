@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Social Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars-bg"></div> <div class="game-wrapper">
+        <header>
+            <h1 class="glow-text">Jornada Social e Escolar</h1>
+            <div class="stats">
+                <span>⭐ Estrelas: <b id="star-count">0</b></span>
+                <span>📍 Casa: <b id="current-pos">0</b>/100</span>
+            </div>
+        </header>
+
+        <div id="board-viewport">
+            <div id="board">
+                <div id="player-token">👤</div>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <div id="dice-container">
+                <div id="dice">?</div>
+            </div>
+            <button id="roll-btn" onclick="rollDice()">Lançar Dado</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <div id="modal-icon">❓</div>
+            <h2 id="modal-title">Desafio Social</h2>
+            <p id="modal-text"></p>
+            <div id="modal-options">
+                <button class="opt-btn" onclick="handleAnswer(true)">Fazer o correto</button>
+                <button class="opt-btn btn-wrong" onclick="handleAnswer(false)">Ignorar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
